@@ -1,0 +1,17 @@
+.displayname {
+  font-family: "Sora", sans-serif;
+  font-size: 16px;
+  color: #2a2a2a;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+
+@media (max-width: 780px) {
+  .displayname {
+    font-family: "Sora", sans-serif;
+    font-size: 12.8px;
+    font-weight: bold;
+    color: #2a2a2a;
+    padding-bottom: 3px;
+  }
+}

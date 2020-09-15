@@ -1,0 +1,13 @@
+.username {
+  font-family: "Sora", sans-serif;
+  font-size: 24px;
+  color: #2a2a2a;
+}
+
+@media (max-width: 780px) {
+  .username {
+    font-family: "Sora", sans-serif;
+    font-size: 19.2px;
+    color: #2a2a2a;
+  }
+}

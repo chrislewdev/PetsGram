@@ -1,0 +1,29 @@
+.ppbody-container {
+  margin: auto;
+  display: grid;
+  background-color: #f9f9f9;
+  margin-top: 63px;
+  grid-template-columns: 1fr 0.8fr;
+  width: 900px;
+  height: 800px;
+  border: 1px solid rgba(42, 42, 42, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .body-container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .background {
+    margin-top: 58px;
+    background-color: #f9f9f9;
+  }
+}

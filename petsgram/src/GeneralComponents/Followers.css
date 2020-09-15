@@ -1,0 +1,32 @@
+.container {
+}
+
+.followers-wording {
+  font-size: 18px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  padding-top: 6px;
+}
+
+.followers-number {
+  font-size: 12px;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  padding-top: 6px;
+}
+
+@media (max-width: 780px) {
+  .followers-wording {
+    font-size: 14.4px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    padding-top: 4.2px;
+  }
+
+  .followers-number {
+    font-size: 9.6px;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    padding-top: 4.2px;
+  }
+}

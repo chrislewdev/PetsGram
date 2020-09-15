@@ -1,0 +1,18 @@
+.display-picture {
+  height: 140px;
+  width: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(42, 42, 42, 0.8);
+}
+
+@media (max-width: 780px) {
+  .display-picture {
+    height: 80px;
+    width: 80px;
+    margin-right: 6px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgba(42, 42, 42, 0.8);
+  }
+}
