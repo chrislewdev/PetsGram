@@ -23,29 +23,11 @@ function PPBody() {
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text.",
   };
 
-  const sampleCommentsArray = [
+  const dbCommentsArray = [
     { displayPhoto: s1, username: "catto", comment: "Nice One!" },
     { displayPhoto: s2, username: "cowwo", comment: "Nice Two!" },
     { displayPhoto: s3, username: "ratto", comment: "Mice Three!" },
   ];
-
-  const [commentsArray, setCommentsArray] = useState(sampleCommentsArray);
-
-  function postComment(comment) {
-    const currentCommentsArray = commentsArray;
-
-    const newComment = {
-      displayPhoto: s1,
-      username: "catto",
-      comment: comment,
-    };
-
-    currentCommentsArray.push(newComment);
-
-    setCommentsArray(currentCommentsArray);
-
-    console.log(commentsArray);
-  }
 
   return (
     <div className="ppbackground">
@@ -60,8 +42,7 @@ function PPBody() {
           ppUsername={user.username}
           ppFollowing={user.following}
           ppDetails={photoObject.details}
-          commentsArray={commentsArray}
-          postComment={postComment}
+          dbCommentsArray={dbCommentsArray}
         />
       </div>
     </div>

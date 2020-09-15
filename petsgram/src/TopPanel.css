@@ -36,6 +36,7 @@
   font-weight: lighter;
   color: #2a2a2a;
   text-align: center;
+  cursor: default;
 }
 
 .searchbar {

@@ -1,9 +1,37 @@
 import React, { Component, useCallback, useEffect, useState } from "react";
 import PPComment from "./PPComment";
+import PPFollowing from "./PPFollowing";
 import "./RightPPBody.css";
+import s1 from "../Images/s1.png";
 
 function RightPPBody(props) {
-  const commentsArray = props.commentsArray;
+  const [commentsArray, setCommentsArray] = useState(props.dbCommentsArray);
+
+  const [input, setInput] = useState("");
+
+  const handleChangePost = (e) => setInput(e.target.value);
+
+  const handleClickPost = () => {
+    if (input != "") {
+      postComment(input);
+
+      setInput("");
+    }
+  };
+
+  function postComment(comment) {
+    const currentCommentsArray = commentsArray;
+
+    const newComment = {
+      displayPhoto: s1,
+      username: "catto",
+      comment: comment,
+    };
+
+    currentCommentsArray.push(newComment);
+
+    setCommentsArray(currentCommentsArray);
+  }
 
   const commentsRender = commentsArray.map((c) => (
     <PPComment
@@ -13,22 +41,14 @@ function RightPPBody(props) {
     />
   ));
 
-  const [input, setInput] = useState("");
-
-  const handleChangePost = (e) => setInput(e.target.value);
-
-  const handleClickPost = () => {
-    props.postComment(input);
-
-    setInput("");
-  };
-
   return (
     <div className="rightppbody-container">
       <div className="pp-user-details-container">
         <img src={props.ppUserDP} className="pp-user-dp" />
         <div className="pp-username">{props.ppUsername}</div>
-        <div className="pp-following">Following</div>
+        <div className="pp-following-container">
+          <PPFollowing />
+        </div>
       </div>
       <div className="pp-photo-details-container">
         <div className="pp-details">{props.ppDetails}</div>
